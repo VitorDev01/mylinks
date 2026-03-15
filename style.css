@@ -1,47 +1,148 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+body{
 
-<title>Vitor Oliveira</title>
+min-height:100vh;
+background:#181c1f;
 
-<link rel="stylesheet" href="style.css">
+display:flex;
+justify-content:center;
+align-items:center;
 
-</head>
+font-family:Arial;
 
-<body>
+}
 
-<div class="container">
+.container{
 
-<img src="foto.jpg" class="foto">
+text-align:center;
+width:100%;
+max-width:400px;
 
-<div class="texth1">
-<h1>VitorOliveira</h1>
-</div>
+}
 
-<ul>
+/* FOTO */
 
-<a href="https://www.siteconfiavel.com.br/">
-<li><span>TikTok Oficial</span></li>
-</a>
+.foto{
 
-<a href="https://donodozap.com/">
-<li><span>Seminario Online</span></li>
-</a>
+width:120px;
+height:120px;
 
-<a href="https://cnpja.com/">
-<li><span>E-book</span></li>
-</a>
+border-radius:50%;
+object-fit:cover;
 
-<a href="https://inteltechniques.com/tools/Facebook.html">
-<li><span>Google Id</span></li>
-</a>
+margin-bottom:20px;
+border:3px solid white;
 
-</ul>
+}
 
-</div>
+/* NOME */
 
-</body>
-</html>
+.texth1{
+
+color:#fff;
+font-weight:100;
+margin-bottom:20px;
+
+}
+
+/* LINKS */
+
+a{
+text-decoration:none;
+-webkit-tap-highlight-color:transparent;
+}
+
+ul{
+
+padding:0;
+list-style:none;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+}
+
+/* BOTÕES */
+
+li{
+
+font-size:22px;
+width:10em;
+height:2.2em;
+
+color:#fff;
+
+border-left:0.08em solid;
+
+position:relative;
+
+margin-top:15px;
+
+cursor:pointer;
+
+}
+
+li::before,
+li::after{
+
+content:'';
+position:absolute;
+width:inherit;
+border-left:inherit;
+z-index:-1;
+
+}
+
+li::before{
+
+height:80%;
+top:10%;
+left:calc(-0.15em - 0.08em * 2);
+filter:brightness(0.8);
+
+}
+
+li::after{
+
+height:60%;
+top:20%;
+left:calc(-0.15em * 2 - 0.08em * 3);
+filter:brightness(0.6);
+
+}
+
+li span{
+
+position:relative;
+
+height:120%;
+top:-10%;
+
+border:0.08em solid;
+
+background-color:#333;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+text-transform:capitalize;
+
+transform:translateX(calc(-0.15em * 3 - 0.08em * 2));
+
+transition:0.3s;
+
+}
+
+li:hover span{
+
+transform:translateX(0.15em);
+
+}
